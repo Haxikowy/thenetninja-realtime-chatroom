@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Chat</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">Chat</h1>
+    <nav>
+      <button class="btn" id="general">#general</button>
+      <button class="btn" id="gaming">#gaming</button>
+      <button class="btn" id="music">#music</button>
+      <button class="btn" id="ninjas">#ninjas</button>
+    </nav>
+
+    <ul class="message-list">
+      <li class="message">
+        <span class="message-name">mario</span> can someone help me?
+        <span class="message-timestamp">less than minute ago</span>
+      </li>
+      <li class="message">
+        <span class="message-name">mario</span> can someone help me?
+        <span class="message-timestamp">less than minute ago</span>
+      </li>
+      <li class="message">
+        <span class="message-name">mario</span> can someone help me?
+        <span class="message-timestamp">less than minute ago</span>
+      </li>
+    </ul>
+
+    <form class="message-form">
+      <div class="input-group">
+        <label for="message-input">Your message:</label>
+        <input type="text" name="message-input" id="message-input">
+        <input type="submit" value="send">
+      </div>
+    </form>
+
+    <form class="name-form">
+      <div class="input-group">
+        <label for="name-input">Update name:</label>
+        <input type="text" name="name-input" id="name-input">
+        <input type="submit" value="update">
+      </div>
+    </form>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyDOT6-xkIa6fRG0vWi6yXq1ljG66G_w1Y4",
+      authDomain: "haxikowy-first-project.firebaseapp.com",
+      projectId: "haxikowy-first-project",
+      storageBucket: "haxikowy-first-project.appspot.com",
+      messagingSenderId: "137903656078",
+      appId: "1:137903656078:web:84a8af1fadff2326778ddf",
+      measurementId: "G-37T57379R0"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+  <script src="scripts/chat.js"></script>
+  <script src="scripts/ui.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+
+</html>

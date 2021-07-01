@@ -11,7 +11,7 @@
 <body>
   <div class="container">
     <h1 class="title">Chat</h1>
-    <nav>
+    <nav class="chat-rooms">
       <button class="btn" id="general">#general</button>
       <button class="btn" id="gaming">#gaming</button>
       <button class="btn" id="music">#music</button>
@@ -19,34 +19,23 @@
     </nav>
 
     <ul class="message-list">
-      <li class="message">
-        <span class="message-name">mario</span> can someone help me?
-        <span class="message-timestamp">less than minute ago</span>
-      </li>
-      <li class="message">
-        <span class="message-name">mario</span> can someone help me?
-        <span class="message-timestamp">less than minute ago</span>
-      </li>
-      <li class="message">
-        <span class="message-name">mario</span> can someone help me?
-        <span class="message-timestamp">less than minute ago</span>
-      </li>
     </ul>
 
     <form class="message-form">
       <div class="input-group">
-        <label for="message-input">Your message:</label>
-        <input type="text" name="message-input" id="message-input">
+        <label for="addChat">Your message:</label>
+        <input type="text" name="addChat" id="addChat">
         <input type="submit" value="send">
       </div>
     </form>
 
     <form class="name-form">
       <div class="input-group">
-        <label for="name-input">Update name:</label>
-        <input type="text" name="name-input" id="name-input">
+        <label for="name">Update name:</label>
+        <input type="text" name="name" id="name">
         <input type="submit" value="update">
       </div>
+      <div class="update-mssg"></div>
     </form>
   </div>
 
@@ -64,8 +53,9 @@
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
+    var db = firebase.firestore();
   </script>
+  <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
   <script src="scripts/chat.js"></script>
   <script src="scripts/ui.js"></script>
   <script src="scripts/app.js"></script>

@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media-queries.css">
   <title>Chat</title>
 </head>
 
@@ -21,17 +22,17 @@
     <ul class="message-list">
     </ul>
 
-    <form class="message-form">
+    <form class="message-form" autocomplete="off">
       <div class="input-group">
-        <label for="addChat">Your message:</label>
+        <label for="addChat">Message:</label>
         <input type="text" name="addChat" id="addChat">
         <input type="submit" value="send">
       </div>
     </form>
 
-    <form class="name-form">
+    <form class="name-form" autocomplete="off">
       <div class="input-group">
-        <label for="name">Update name:</label>
+        <label for="name">Name:</label>
         <input type="text" name="name" id="name">
         <input type="submit" value="update">
       </div>

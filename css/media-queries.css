@@ -1,0 +1,25 @@
+@media(max-width: 700px){
+  body{
+  position: relative;
+  }
+  .container {
+    margin: 30px auto;
+    min-width: 300px;
+    max-width: 300px;
+  }
+  .btn {
+    font-size: .7rem;
+    padding: 9px 10px;
+  }
+  .message {
+    padding: 15px;
+    font-size: .85rem;
+  }
+  .message-name {
+    font-size: 1.1rem;
+  }
+  .input-group label{
+    flex: 1;
+    font-size: .8em;
+  }
+}
